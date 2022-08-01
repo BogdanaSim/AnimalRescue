@@ -48,5 +48,33 @@ public class App {
         System.out.println(game);
         System.out.println("Game veterinarian: "+game.getVeterinarian());
         System.out.println("Game dog: "+game.getDog());
+
+        System.out.println("\n");
+        Dog dog1=new Dog();
+        dog1.setName("Henry");
+        dog1.setJob("Lifeguard");
+        System.out.println("Dog named "+dog1.getName()+" has the job: "+dog1.getJob());
+        dog1.bark();
+        System.out.println("\n");
+        Cat cat=new Cat();
+        cat.setName("Hela");
+        cat.setFavouriteFish("Throut");
+        cat.setPurring(true);
+        System.out.println("Cat named "+cat.getName()+" has as favourite fish: "+cat.getFavouriteFish());
+        cat.checkPurring();
+        cat.meow();
+        System.out.println("\n");
+
+        Duck duck=new Duck();
+        duck.setName("Kore");
+        duck.setWingspan(20);
+        duck.setIsDomestic(true);
+        System.out.println("Duck named "+duck.getName()+" has as wingspan: "+duck.getWingspan()+" cm");
+        duck.quack();
+
+
+
+
+
     }
 }
