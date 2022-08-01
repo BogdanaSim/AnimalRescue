@@ -9,6 +9,9 @@ public class Animal {
     public String favoriteFood;
     public String favoriteActivity;
 
+    public Animal() {
+    }
+
     @Override
     public String toString() {
         return "Animal{" +
