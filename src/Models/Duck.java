@@ -37,4 +37,9 @@ public class Duck extends Animal{
                 ", domestic=" + domestic +
                 '}';
     }
+
+    @Override
+    public int speed() {
+        return 5;
+    }
 }

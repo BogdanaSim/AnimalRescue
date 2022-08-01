@@ -85,4 +85,8 @@ public class Animal {
     public String speak(){
         return "Sound";
     }
+
+    public int speed(){
+        return 0;
+    }
 }

@@ -33,4 +33,9 @@ public class Dog extends Animal{
                 "job='" + job + '\'' +
                 '}';
     }
+
+    @Override
+    public int speed() {
+        return 15;
+    }
 }

@@ -43,4 +43,9 @@ public class Cat extends Animal{
     public String speak() {
         return "Meow!";
     }
+
+    @Override
+    public int speed() {
+        return 10;
+    }
 }
