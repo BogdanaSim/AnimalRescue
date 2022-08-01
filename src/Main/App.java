@@ -68,7 +68,7 @@ public class App {
         Duck duck=new Duck();
         duck.setName("Kore");
         duck.setWingspan(20);
-        duck.setIsDomestic(true);
+        duck.setDomestic(true);
         System.out.println("Duck named "+duck.getName()+" has as wingspan: "+duck.getWingspan()+" cm");
         duck.quack();
 

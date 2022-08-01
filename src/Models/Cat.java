@@ -2,7 +2,7 @@ package Models;
 
 public class Cat extends Animal{
     private String favouriteFish;
-    private boolean isPurring;
+    private boolean purring;
 
     public String getFavouriteFish() {
         return favouriteFish;
@@ -13,11 +13,11 @@ public class Cat extends Animal{
     }
 
     public boolean isPurring() {
-        return isPurring;
+        return purring;
     }
 
     public void setPurring(boolean purring) {
-        isPurring = purring;
+        this.purring = purring;
     }
 
     public void meow(){
@@ -25,7 +25,7 @@ public class Cat extends Animal{
     }
 
     public void checkPurring(){
-        if(isPurring)
+        if(purring)
             System.out.println("The cat named "+getName()+"is purring. It seems happy!");
         else System.out.println("The cat named "+getName()+"is not purring. It might sleep!");
     }

@@ -2,7 +2,7 @@ package Models;
 
 public class Duck extends Animal{
     private double wingspan;
-    private boolean isDomestic;
+    private boolean domestic;
 
     public double getWingspan() {
         return wingspan;
@@ -12,12 +12,12 @@ public class Duck extends Animal{
         this.wingspan = wingspan;
     }
 
-    public boolean getIsDomestic() {
-        return isDomestic;
+    public boolean getDomestic() {
+        return domestic;
     }
 
-    public void setIsDomestic(boolean isDomestic) {
-        this.isDomestic = isDomestic;
+    public void setDomestic(boolean domestic) {
+        this.domestic = domestic;
     }
 
     public void quack(){
