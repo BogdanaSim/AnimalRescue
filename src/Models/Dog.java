@@ -21,4 +21,16 @@ public class Dog extends Animal{
     public void bark(){
         System.out.println("Dog with name "+getName()+": Woof Woof Woof");
     }
+
+    @Override
+    public String speak() {
+        return "Woof!";
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"\n->"+"Dog{" +
+                "job='" + job + '\'' +
+                '}';
+    }
 }

@@ -29,4 +29,18 @@ public class Cat extends Animal{
             System.out.println("The cat named "+getName()+"is purring. It seems happy!");
         else System.out.println("The cat named "+getName()+"is not purring. It might sleep!");
     }
+
+
+    @Override
+    public String toString() {
+        return super.toString()+"\n->"+"Cat{" +
+                "favouriteFish='" + favouriteFish + '\'' +
+                ", purring=" + purring +
+                '}';
+    }
+
+    @Override
+    public String speak() {
+        return "Meow!";
+    }
 }

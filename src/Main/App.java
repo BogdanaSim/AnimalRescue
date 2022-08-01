@@ -73,6 +73,14 @@ public class App {
         duck.quack();
 
 
+        System.out.println("\n"+dog1.speak());
+        System.out.println(dog1);
+
+        System.out.println("\n"+cat.speak());
+        System.out.println(cat);
+
+        System.out.println("\n"+duck.speak());
+        System.out.println(duck);
 
 
 

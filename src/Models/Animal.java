@@ -80,4 +80,9 @@ public class Animal {
                 ", favoriteActivity='" + favoriteActivity + '\'' +
                 '}';
     }
+
+
+    public String speak(){
+        return "Sound";
+    }
 }

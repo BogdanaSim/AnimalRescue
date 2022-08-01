@@ -24,4 +24,17 @@ public class Duck extends Animal{
         System.out.println("Duck with name "+getName()+": Quack Quack Quack");
 
     }
+
+    @Override
+    public String speak() {
+        return "Quack!";
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"\n->"+"Duck{" +
+                "wingspan=" + wingspan +
+                ", domestic=" + domestic +
+                '}';
+    }
 }
