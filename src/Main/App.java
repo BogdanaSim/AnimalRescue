@@ -7,14 +7,7 @@ import java.util.Calendar;
 
 public class App {
     public static void main(String[] args) {
-        Animal dog = new Animal();
-        dog.setName("Chris");
-        dog.setAge(5);
-        dog.setHealthLevel(9);
-        dog.setHungerLevel(2);
-        dog.setSpiritLevel(8);
-        dog.setFavoriteFood("Meat");
-        dog.setFavoriteActivity("Play fetch");
+
         Adopter adopter = new Adopter();
         adopter.setName("Michael Jones");
         adopter.setAvailableBudget(500);
@@ -32,12 +25,7 @@ public class App {
         veterinarian.setName("Ana Mary");
         veterinarian.setSpecialization("Surgery");
         Game game = new Game();
-        game.setAdopter(adopter);
-        game.setDog(dog);
-        game.setVeterinarian(veterinarian);
-        System.out.println(dog);
-        System.out.println("Animal favorite food: " + dog.getFavoriteFood());
-        System.out.println(adopter);
+       System.out.println(adopter);
         System.out.println("Adopter name: " + adopter.getName());
         System.out.println(animalFood);
         System.out.println("Animal food quantity: " + animalFood.getQuantity());
@@ -76,15 +64,17 @@ public class App {
         System.out.println("\n" + dog1.speak());
         System.out.println(dog1);
         System.out.println("Dog speed: " + dog1.speed() + " m/h");
+        System.out.println("Dog can "+dog1.walk());
 
         System.out.println("\n" + cat.speak());
         System.out.println(cat);
         System.out.println("Cat speed: " + cat.speed() + " m/h");
+        System.out.println("Cat can "+cat.walk());
 
         System.out.println("\n" + duck.speak());
         System.out.println(duck);
         System.out.println("Duck speed: " + duck.speed() + " m/h");
-
+        System.out.println("Duck can "+duck.walk());
 
     }
 }

@@ -33,9 +33,16 @@ public class Cat extends Animal{
 
     @Override
     public String toString() {
-        return super.toString()+"\n->"+"Cat{" +
+        return "Cat{" +
                 "favouriteFish='" + favouriteFish + '\'' +
                 ", purring=" + purring +
+                ", name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", healthLevel=" + getHealthLevel() +
+                ", hungerLevel=" + getHungerLevel() +
+                ", spiritLevel=" + getSpiritLevel() +
+                ", favoriteFood='" + getFavoriteFood() + '\'' +
+                ", favoriteActivity='" + getFavoriteActivity() + '\'' +
                 '}';
     }
 
@@ -48,4 +55,11 @@ public class Cat extends Animal{
     public int speed() {
         return 10;
     }
+
+    @Override
+    public String walk() {
+        return "CRAAAAAAWL";
+    }
+
+
 }

@@ -32,14 +32,26 @@ public class Duck extends Animal{
 
     @Override
     public String toString() {
-        return super.toString()+"\n->"+"Duck{" +
+        return "Duck{" +
                 "wingspan=" + wingspan +
                 ", domestic=" + domestic +
+                ", name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", healthLevel=" + getHealthLevel() +
+                ", hungerLevel=" + getHungerLevel() +
+                ", spiritLevel=" + getSpiritLevel() +
+                ", favoriteFood='" + getFavoriteFood() + '\'' +
+                ", favoriteActivity='" + getFavoriteActivity() + '\'' +
                 '}';
     }
 
     @Override
     public int speed() {
         return 5;
+    }
+
+    @Override
+    public String walk() {
+        return "SWIIIIIIIM";
     }
 }

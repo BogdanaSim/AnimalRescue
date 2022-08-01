@@ -29,13 +29,25 @@ public class Dog extends Animal{
 
     @Override
     public String toString() {
-        return super.toString()+"\n->"+"Dog{" +
+        return "Dog{" +
                 "job='" + job + '\'' +
+                ", name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", healthLevel=" + getHealthLevel() +
+                ", hungerLevel=" + getHungerLevel() +
+                ", spiritLevel=" + getSpiritLevel() +
+                ", favoriteFood='" + getFavoriteFood() + '\'' +
+                ", favoriteActivity='" + getFavoriteActivity() + '\'' +
                 '}';
     }
 
     @Override
     public int speed() {
         return 15;
+    }
+
+    @Override
+    public String walk() {
+        return "RUUUUUUN";
     }
 }
