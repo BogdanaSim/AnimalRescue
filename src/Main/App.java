@@ -47,5 +47,6 @@ public class App {
         System.out.println("Veterinarian specialization: "+veterinarian.getSpecialization());
         System.out.println(game);
         System.out.println("Game veterinarian: "+game.getVeterinarian());
+        System.out.println("Game dog: "+game.getDog());
     }
 }
