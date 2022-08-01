@@ -8,9 +8,9 @@ public class Game {
     @Override
     public String toString() {
         return "Game{" +
-                "adopter=" + adopter.toString() +
-                ", dog=" + dog.toString() +
-                ", veterinarian=" + veterinarian.toString() +
+                "adopter=" + adopter +
+                ", dog=" + dog +
+                ", veterinarian=" + veterinarian +
                 '}';
     }
 }
