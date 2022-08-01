@@ -1,12 +1,36 @@
 package Models;
 
 public class Game {
-    public Adopter adopter;
-    public Animal dog;
-    public Veterinarian veterinarian;
+    private Adopter adopter;
+    private Animal dog;
+    private Veterinarian veterinarian;
 
 
     public Game() {
+    }
+
+    public Adopter getAdopter() {
+        return adopter;
+    }
+
+    public void setAdopter(Adopter adopter) {
+        this.adopter = adopter;
+    }
+
+    public Animal getDog() {
+        return dog;
+    }
+
+    public void setDog(Animal dog) {
+        this.dog = dog;
+    }
+
+    public Veterinarian getVeterinarian() {
+        return veterinarian;
+    }
+
+    public void setVeterinarian(Veterinarian veterinarian) {
+        this.veterinarian = veterinarian;
     }
 
     public Game(Adopter adopter, Animal dog, Veterinarian veterinarian) {

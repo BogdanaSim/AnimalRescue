@@ -13,6 +13,22 @@ public class Adopter {
         this.availableBudget = availableBudget;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getAvailableBudget() {
+        return availableBudget;
+    }
+
+    public void setAvailableBudget(float availableBudget) {
+        this.availableBudget = availableBudget;
+    }
+
     @Override
     public String toString() {
         return "Adopter{" +
