@@ -1,6 +1,6 @@
 package Models;
 
-public class Animal {
+public abstract class Animal{
     private String name;
     private int age;
     private int healthLevel;
@@ -68,16 +68,12 @@ public class Animal {
     public Animal() {
     }
 
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", healthLevel=" + healthLevel +
-                ", hungerLevel=" + hungerLevel +
-                ", spiritLevel=" + spiritLevel +
-                ", favoriteFood='" + favoriteFood + '\'' +
-                ", favoriteActivity='" + favoriteActivity + '\'' +
-                '}';
-    }
+
+    public abstract String toString() ;
+
+    public abstract String speak();
+
+    public abstract int speed();
+
+    public abstract String walk();
 }
