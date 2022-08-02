@@ -1,6 +1,9 @@
-package Models;
+package Models.Persons;
 
-public class Veterinarian {
+import Models.Animals.Animal;
+import Models.Animals.Dog;
+
+public class Veterinarian implements IVet{
     private String name;
     private String specialization;
 
@@ -34,5 +37,24 @@ public class Veterinarian {
 
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
+    }
+
+    @Override
+    public void vaccinate(Animal animal) {
+        if(animal.getHealthLevel()<10)
+            animal.setHealthLevel(animal.getHealthLevel()+1);
+    }
+
+    @Override
+    public void disinfest(Animal animal) {
+
+    }
+
+    @Override
+    public void provideTreatment(Animal animal, Nurse nurse) {
+        this.vaccinate(animal);
+        this.disinfest(animal);
+        nurse.petAnimal(animal);
+
     }
 }

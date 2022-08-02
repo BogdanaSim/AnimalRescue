@@ -1,80 +1,74 @@
 package Main;
 
 import Models.*;
+import Models.Animals.Cat;
+import Models.Animals.Dog;
+import Models.Animals.Duck;
+import Models.Food.DogFood;
+import Models.Food.WetFood;
+import Models.Persons.Father;
+import Models.Persons.Girl;
+import Models.Persons.Nurse;
+import Models.Persons.Veterinarian;
 
 import java.time.LocalDateTime;
 import java.util.Calendar;
 
 public class App {
     public static void main(String[] args) {
+        Father father = new Father();
 
-        Adopter adopter = new Adopter();
-        adopter.setName("Michael Jones");
-        adopter.setAvailableBudget(500);
-        AnimalFood animalFood = new AnimalFood();
-        animalFood.setName("Meat");
-        animalFood.setPrice(50);
-        animalFood.setQuantity(100);
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2023, Calendar.NOVEMBER, 11);
-        animalFood.setExpirationDate(calendar.getTime());
-        animalFood.setAvailabilityStock(true);
-        RecreationActivity recreationActivity = new RecreationActivity();
-        recreationActivity.setName("Play with ball");
-        Veterinarian veterinarian = new Veterinarian();
-        veterinarian.setName("Ana Mary");
-        veterinarian.setSpecialization("Surgery");
-        Game game = new Game();
-       System.out.println(adopter);
-        System.out.println("Adopter name: " + adopter.getName());
-        System.out.println(animalFood);
-        System.out.println("Animal food quantity: " + animalFood.getQuantity());
-        System.out.println(recreationActivity);
-        System.out.println("Recreation activity name: " + recreationActivity.getName());
-        System.out.println(veterinarian);
-        System.out.println("Veterinarian specialization: " + veterinarian.getSpecialization());
-        System.out.println(game);
-        System.out.println("Game veterinarian: " + game.getVeterinarian());
-        System.out.println("Game dog: " + game.getDog());
+        Girl girl = new Girl();
+        girl.setName("Ana");
+        girl.setAge(7);
+        girl.setHairColor("Brown");
+        girl.setHeight(10);
 
-        System.out.println("\n");
-        Dog dog1 = new Dog();
-        dog1.setName("Henry");
-        dog1.setJob("Lifeguard");
-        System.out.println("Dog named " + dog1.getName() + " has the job: " + dog1.getJob());
-        dog1.bark();
-        System.out.println("\n");
+
+        Dog dog = new Dog();
+        dog.setName("Default");
+        dog.setBreed("Corcitura de labrador");
+        dog.setAge(5);
+        dog.setWeight(1);
+        dog.setSpiritLevel(1);
+        dog.setHappiness(HappinessStates.SAD);
+        dog.setHungry(false);
+        dog.setScared(true);
+
         Cat cat = new Cat();
-        cat.setName("Hela");
-        cat.setFavouriteFish("Throut");
-        cat.setPurring(true);
-        System.out.println("Cat named " + cat.getName() + " has as favourite fish: " + cat.getFavouriteFish());
-        cat.checkPurring();
-        cat.meow();
-        System.out.println("\n");
+        cat.setName("Cat");
+        cat.setAge(2);
 
         Duck duck = new Duck();
-        duck.setName("Kore");
-        duck.setWingspan(20);
-        duck.setDomestic(true);
-        System.out.println("Duck named " + duck.getName() + " has as wingspan: " + duck.getWingspan() + " cm");
-        duck.quack();
 
+        AnimalShelter shelter = new AnimalShelter();
+        shelter.addAnimal(dog);
+        shelter.addAnimal(cat);
+        shelter.addAnimal(duck);
 
-        System.out.println("\n" + dog1.speak());
-        System.out.println(dog1);
-        System.out.println("Dog speed: " + dog1.speed() + " m/h");
-        System.out.println("Dog can "+dog1.walk());
+        girl.adopt(dog);
+        shelter.removeAnimal(dog);
 
-        System.out.println("\n" + cat.speak());
-        System.out.println(cat);
-        System.out.println("Cat speed: " + cat.speed() + " m/h");
-        System.out.println("Cat can "+cat.walk());
+        girl.nameAnimal("Dog");
 
-        System.out.println("\n" + duck.speak());
-        System.out.println(duck);
-        System.out.println("Duck speed: " + duck.speed() + " m/h");
-        System.out.println("Duck can "+duck.walk());
+        DogFood dogFood = new DogFood();
+        girl.feedAnimal(dogFood);
+        girl.playWithAnimal();
+
+        Veterinarian veterinarian=new Veterinarian();
+        veterinarian.setName("George");
+        veterinarian.setSpecialization("Surgery");
+
+        Nurse nurse=new Nurse();
+        nurse.setName("Ella");
+        girl.sendToVet(veterinarian,nurse);
+
+        WetFood wetFood=new WetFood();
+        for(int i=0;i<2;i++)
+            girl.feedAnimal(wetFood);
+
+        for(int i=0;i<10;i++)
+            girl.routine();
 
     }
 }

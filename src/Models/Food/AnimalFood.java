@@ -1,4 +1,4 @@
-package Models;
+package Models.Food;
 
 import java.util.Date;
 

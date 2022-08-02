@@ -1,4 +1,7 @@
-package Models;
+package Models.Animals;
+
+
+import Models.Food.AnimalFood;
 
 public class Duck extends Animal{
     private double wingspan;
@@ -51,7 +54,37 @@ public class Duck extends Animal{
     }
 
     @Override
-    public String walk() {
-        return "SWIIIIIIIM";
+    public void walk() {
+
+    }
+
+    @Override
+    public void play() {
+
+    }
+
+    @Override
+    public void calm() {
+
+    }
+
+    @Override
+    public void raiseFear() {
+
+    }
+
+    @Override
+    public void sleep() {
+
+    }
+
+    @Override
+    public void wakeUp() {
+
+    }
+
+    @Override
+    public void eat(AnimalFood animalFood) {
+
     }
 }

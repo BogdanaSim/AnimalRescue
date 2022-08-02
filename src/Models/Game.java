@@ -1,5 +1,9 @@
 package Models;
 
+import Models.Animals.Animal;
+import Models.Persons.Adopter;
+import Models.Persons.Veterinarian;
+
 public class Game {
     private Adopter adopter;
     private Animal dog;

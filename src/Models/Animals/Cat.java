@@ -1,4 +1,7 @@
-package Models;
+package Models.Animals;
+
+
+import Models.Food.AnimalFood;
 
 public class Cat extends Animal{
     private String favouriteFish;
@@ -32,6 +35,11 @@ public class Cat extends Animal{
 
 
     @Override
+    public void eat(AnimalFood animalFood) {
+
+    }
+
+    @Override
     public String toString() {
         return "Cat{" +
                 "favouriteFish='" + favouriteFish + '\'' +
@@ -57,8 +65,33 @@ public class Cat extends Animal{
     }
 
     @Override
-    public String walk() {
-        return "CRAAAAAAWL";
+    public void walk() {
+
+    }
+
+    @Override
+    public void play() {
+
+    }
+
+    @Override
+    public void calm() {
+
+    }
+
+    @Override
+    public void raiseFear() {
+
+    }
+
+    @Override
+    public void sleep() {
+
+    }
+
+    @Override
+    public void wakeUp() {
+
     }
 
 

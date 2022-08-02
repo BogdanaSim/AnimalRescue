@@ -1,4 +1,4 @@
-package Models;
+package Models.Persons;
 
 public class Adopter {
     public String name;
@@ -28,6 +28,8 @@ public class Adopter {
     public void setAvailableBudget(float availableBudget) {
         this.availableBudget = availableBudget;
     }
+
+
 
     @Override
     public String toString() {
